@@ -20,5 +20,15 @@ public class VendingMachine {
         return null;
     }
 
+    public Cips getCips(String name, String taste, double weight) {
+        for (Product product : products) {
+            if (product instanceof Cips) {
+                Cips cips = (Cips)product;
+                if (cips.getName().equals(name) && cips.getTaste() == taste && cips.getWeght() == weight)
+                return cips;
+            }
+        }
+        return null;
+    }
 
 }
